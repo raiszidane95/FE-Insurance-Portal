@@ -84,7 +84,6 @@ export default function PendaftaranPage() {
 
   const createKartuAsuransi = async () => {
     try {
-      setIsLoading(true);
       const response = await postKartuAsuransi({
         Kode_Asuransi: dataEligibilitas?.Rekanan.Kode_Asuransi,
         No_MR: pasien?.No_MR,
@@ -97,8 +96,6 @@ export default function PendaftaranPage() {
       Swal.fire("Success", response?.message, "success");
     } catch (error) {
       console.error(error);
-    } finally {
-      setIsLoading(false);
     }
   };
 
