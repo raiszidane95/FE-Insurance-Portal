@@ -34,11 +34,15 @@ export default function DashboardPage() {
 
   React.useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
       try {
         const response = await listSJP();
-        setData(response.data);
+        setData(response?.data);
       } catch (error) {
+        setData([]);
         console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
       }
     };
     fetchData();
@@ -78,7 +82,7 @@ export default function DashboardPage() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {data.length > 0 ? data.map((item) => (
+              {data?.length > 0 ? data.map((item) => (
                 <TableRow key={item.id}>
                   {/* Aksi */}
                   <TableCell>
