@@ -110,7 +110,7 @@ export default function DashboardPage() {
                   </TableCell>
 
                   {/* Nomor Tanggal */}
-                  <TableCell>{formatedDate(item.createdAt)}</TableCell>
+                  <TableCell>{formatedDate(item.createdAt.split("T")[0])}</TableCell>
                   <TableCell>
                     <Badge variant="outline" className="border-green-600 text-green-600">
                       {item.status}
