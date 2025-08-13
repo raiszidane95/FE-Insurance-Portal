@@ -101,12 +101,12 @@ export default function DashboardPage() {
                   
                   {/* Jenis Asuransi */}
                   <TableCell>
-                    <div className="font-medium">{item.PENDAFTARAN.IP_ASURANSI.Jenis_Asuransi}</div>
+                    <div className="font-medium">{item.IP_ASURANSI?.Jenis_Asuransi || "-"}</div>
                   </TableCell>
                   
                   {/* Nama Asuransi */}
                   <TableCell>
-                    <div className="font-medium">{item.PENDAFTARAN.IP_ASURANSI.Nama_Asuransi}</div>
+                    <div className="font-medium">{item.IP_ASURANSI?.Nama_Asuransi || "-"}</div>
                   </TableCell>
 
                   {/* Nomor Tanggal */}
