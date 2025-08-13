@@ -1,6 +1,18 @@
 const apiUrl = import.meta.env.VITE_URL;
 const token = localStorage.getItem("token")
 
+export const logs = async () => {
+  const response = await fetch(`${apiUrl}/logs`, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    method: "GET",
+    cache: "no-store",
+  });
+  return await response.json();
+}
+
 export const LoginApi = async (data) => {
   const response = await fetch(`${apiUrl}/login`, {
     headers: {
