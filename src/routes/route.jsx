@@ -6,6 +6,7 @@ import LoginPage from '@/pages/Login';
 import CekEligibilitasPage from '@/pages/CekEligibilitas';
 import DashboardPage from '@/pages/Dashboard';
 import SimpanSJPPage from '@/pages/SimpanSJP';
+import LogsPage from '@/pages/Logs';
 
 // Auth loader
 const authLoader = (requiredRoles = null) => () => {
@@ -60,6 +61,7 @@ const routes =
         { path: "/", element: <DashboardPage /> },
         { path: "pendaftaran", element: <CekEligibilitasPage /> },
         { path: "simpan-sjp", element: <SimpanSJPPage /> },
+        { path: "/logs", element: <LogsPage /> },
       ]
     },
     {
