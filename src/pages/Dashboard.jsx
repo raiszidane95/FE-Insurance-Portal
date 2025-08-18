@@ -74,6 +74,8 @@ export default function DashboardPage() {
               <TableRow>
                 <TableHead className="w-[50px]">Aksi</TableHead>
                 <TableHead>Nomor Register</TableHead>
+                <TableHead>Nomor MR</TableHead>
+                <TableHead>Nomor Kartu</TableHead>
                 <TableHead>Nomor SJP</TableHead>
                 <TableHead>Jenis Asuransi</TableHead>
                 <TableHead>Nama Asuransi</TableHead>
@@ -92,6 +94,16 @@ export default function DashboardPage() {
                   {/* Nomor Register */}
                   <TableCell>
                     <div className="font-medium">{item.PENDAFTARAN.No_Reg}</div>
+                  </TableCell>
+                  
+                  {/* Nomor MR */}
+                  <TableCell>
+                    <div className="font-medium">{item.PENDAFTARAN.No_MR}</div>
+                  </TableCell>
+                  
+                   {/* Nomor Kartu */}
+                  <TableCell>
+                    <div className="font-medium">{item.PENDAFTARAN.No_Kartu}</div>
                   </TableCell>
 
                   {/* Nomor SJP */}

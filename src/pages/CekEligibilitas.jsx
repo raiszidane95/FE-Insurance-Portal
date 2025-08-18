@@ -93,7 +93,7 @@ export default function CekEligibilitasPage() {
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center p-4">
-      <Card className="w-full max-w-2xl shadow-xl rounded-xl overflow-hidden">
+      <Card className="w-full max-w-4xl shadow-xl rounded-xl overflow-hidden">
         <CardHeader className="bg-primaryBlue text-primary-foreground p-6">
           <div className="flex items-center gap-4">
             <ShieldCheck className="h-10 w-10" />
